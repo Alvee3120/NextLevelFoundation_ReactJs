@@ -2,6 +2,6 @@ export default function Testcomponents(){
 
     return <>
     
-    <h1>Hello World!</h1>
+    <h1>Profile Card !</h1>
     </>
 }
