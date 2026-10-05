@@ -1,9 +1,10 @@
 import Card from './components/Card'
+import Counter from './components/Counter'
 
 let users = [
   {
     name: 'Md Fazlah Karim Alvee',
-    age: 25,
+    age: 15,
     address: 'Uttara, Azompur, 1230',
     phone: '8801642874989',
     company: 'Shordindu',
@@ -146,18 +147,7 @@ let users = [
 function App() {
   return (
     <>
-      {users
-        .filter((user) => user.age > 25)
-        .sort((a, b) => b.age - a.age)
-        .map((user) => (
-          <Card
-            name={user.name}
-            age={user.age}
-            address={user.address}
-            phone={user.phone}
-            company={user.company}
-          />
-        ))}
+      <Counter />
     </>
   )
 }
