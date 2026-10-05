@@ -12,7 +12,7 @@ function App() {
   return (
     <>
      <Testcomponents />
-     <Card name = "Md Fazlah Karim Alvee"  age = {25} phone = {8801642874989} address="Uttara, Azompur, 1230" company="Shordindu"/>
+     <Card name = "Md Fazlah Karim Alvee"  age = {25} phone = {8801642874989} address="Uttara, Azompur, 1230" company="Shordindu"> Hello World </Card>
     </>
   )
 }
