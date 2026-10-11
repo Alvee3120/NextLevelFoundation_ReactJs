@@ -1,28 +1,33 @@
 .container {
   background-color: rgb(180, 203, 195);
   color: black;
-   border: 1px solid black;
+  border: 1px solid black;
 }
 h1 {
   color: black;
 }
 .body {
-  
   padding: 20px;
 }
-.btn{
+.btn {
   padding: 8px 20px;
-  margin:10px;
-  
-  border:  none;
+  margin: 10px;
+
+  border: none;
   border-radius: 8px;
   font-size: 25px;
-} 
-
-.btn-dec{
-background-color: brown;
 }
 
-.btn-inc{
-background-color: rgb(23, 105, 1);
+.btn-dec {
+  background-color: brown;
+}
+
+.btn-inc {
+  background-color: rgb(23, 105, 1);
+}
+body {
+  background-color: black;
+}
+h1,h2,h3,h4,h5,h6{
+  color: white;
 }

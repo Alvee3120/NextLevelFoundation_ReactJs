@@ -1,12 +1,25 @@
+import { useEffect } from "react";
 import "./App.css";
-import Parent from "./components/Parent";
-import CounterProvider from "./providers/Counter.provider";
+
+import { useState } from "react";
+// import Parent from "./components/Parent";
+// import CounterProvider from "./providers/Counter.provider";
 
 function App() {
+  const [second, setSecond] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSecond((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <CounterProvider>
-      <Parent />
-    </CounterProvider>
+    <>
+      <h1>{second}</h1>
+    </>
   );
 }
 
