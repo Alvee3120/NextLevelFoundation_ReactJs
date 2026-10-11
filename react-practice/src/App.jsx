@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import Counter from './components/Counter'
 import Display from './components/Display'
- 
+import CounterProvider from './providers/counterProvider'
+
 export default function App() {
-  const [count, setCount] = useState(0);
   return (
-    <>
-    <h3>Parent</h3>
-      <Counter count={count} setCount={setCount} />
-      <Display count={count} />
-    </>
+    <CounterProvider>
+      <h3>Parent</h3>
+      <Counter />
+      <Display />
+    </CounterProvider>
   )
 }
