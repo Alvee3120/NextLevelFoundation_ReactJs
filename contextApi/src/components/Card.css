@@ -1,0 +1,35 @@
+
+.user-card {
+  width: 280px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 10px #00000010;
+}
+
+.user-card h2 {
+  color: #2563eb;
+  margin-top: 0;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.user-card h4 {
+  margin-bottom: 8px;
+}
+
+.user-card hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.catchphrase {
+  font-style: italic;
+}
