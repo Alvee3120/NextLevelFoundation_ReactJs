@@ -9,14 +9,35 @@ import Card from "./components/Card";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [err, setErr] = useState("");
+
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
+  //     res
+  //       .json()
+  //       .then((data) => setData(data))
+  //       .finally(() => setIsLoading(false)),
+  //   );
+  // }, []);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-      res
-        .json()
-        .then((data) => setData(data))
-        .finally(() => setIsLoading(false)),
-    );
+    const fetchUser = async () => {
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if (!res.ok) {
+          throw new Error(res.message || "something went wrong");
+        }
+
+        const data = await res.json();
+        setData(data);
+      } catch (err) {
+        setErr(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchUser();
   }, []);
 
   if (isLoading) {
